@@ -1,0 +1,16 @@
+{
+  "name": "basicnode",
+  "version": "1.0.0",
+  "description": "노드 기초 익히기",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "김기태(kimkitae)",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
