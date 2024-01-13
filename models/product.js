@@ -19,8 +19,11 @@ const getProductsFromFile = (callback) => {
 
 module.exports = class Product {
   // 생성자
-  constructor(t) {
-    this.title = t;
+  constructor(title, imageUrl, description, price) {
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 
   // 메소드
