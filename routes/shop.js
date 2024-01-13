@@ -1,5 +1,5 @@
-const express = require("express");
 const path = require("path");
+const express = require("express");
 
 // 컨트롤러 추가
 const productsController = require("../controllers/products");
