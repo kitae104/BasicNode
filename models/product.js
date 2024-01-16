@@ -19,7 +19,7 @@ const getProductsFromFile = (callback) => {
 
 module.exports = class Product {
   // 생성자
-  constructor(title, imageUrl, description, price) {
+  constructor(title, imageUrl, price, description) {
     this.title = title;
     this.imageUrl = imageUrl;
     this.description = description;
@@ -40,5 +40,12 @@ module.exports = class Product {
   // static 메소드 - 객체를 생성하지 않고도 호출 가능
   static fetchAll(callback) {
     getProductsFromFile(callback);    
+  }
+
+  static findById(id, callback) {    
+    getProductsFromFile(products => {
+      const product = products.find(p => p.id === id);    // id가 일치하는 객체를 찾음
+      callback(product);                                  // 찾은 객체를 callback으로 전달
+    })
   }
 };

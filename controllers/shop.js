@@ -13,15 +13,14 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;   // 동적 라우팅으로 전달된 productId 값 추출
-  // Product.findById(prodId, product => {   // Product 모델의 findById() 메소드 호출
-  //   res.render("shop/product-detail", {
-  //     product: product,
-  //     pageTitle: product.title,
-  //     path: "/products"
-  //   });
-  // });
-  console.log(prodId);
-  res.redirect('/');
+  Product.findById(prodId, product => {   // Product 모델의 findById() 메소드 호출
+    res.render("shop/product-detail", {
+      product: product,
+      pageTitle: product.title,
+      path: "/products"
+    });    
+  });  
+  //res.redirect('/');
 };
 
 exports.getIndex = (req, res, next) => {
@@ -39,6 +38,12 @@ exports.getCart = (req, res, next) => {
     pageTitle: "Your Cart",
     path: "/cart",
   });
+};
+
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId;   // 동적 라우팅으로 전달된 productId 값 추출
+  console.log(prodId);
+  res.redirect('/cart');
 };
 
 exports.getOrders = (req, res, next) => {

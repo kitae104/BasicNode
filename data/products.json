@@ -1,1 +1,17 @@
-[{"id":"12345", "title":"명품자바","imageUrl":"https://www.booksr.co.kr/wp-content/uploads/2022/01/bookcover_img130.jpg","description":"33000","price":"명품 자바는 다양한 독자들이 자바를 배우기 쉽도록 여러 가지 특징을 가지고 있습니다."}]
+[
+  {
+    "id": "12345",
+    "title": "명품자바",
+    "imageUrl": "https://www.booksr.co.kr/wp-content/uploads/2022/01/bookcover_img130.jpg",
+    "price": "33000",
+    "description": "명품 자바를 배워요"
+    
+  },
+  {
+    "title": "C언어 Express (개정4판)",
+    "imageUrl": "https://www.booksr.co.kr/wp-content/uploads/2022/11/C%EC%96%B8%EC%96%B4Express4%ED%8C%90_%ED%91%9C%EC%A7%80-scaled.jpg",
+    "description": "C언어 익스프레스로 배워요",
+    "price": "32000",
+    "id": "0.39958019680567847"
+  }
+]
