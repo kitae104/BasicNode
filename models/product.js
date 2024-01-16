@@ -28,6 +28,7 @@ module.exports = class Product {
 
   // 메소드
   save() {    
+    this.id = Math.random().toString();   // 임의의 id 생성 - 추후에 변경 
     getProductsFromFile(products => {
       products.push(this);  // this는 현재 Product 객체
       fs.writeFile(p, JSON.stringify(products), err => {
