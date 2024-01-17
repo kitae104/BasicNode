@@ -46,6 +46,6 @@ module.exports = class Product {
     getProductsFromFile(products => {
       const product = products.find(p => p.id === id);    // id가 일치하는 객체를 찾음
       callback(product);                                  // 찾은 객체를 callback으로 전달
-    })
+    });
   }
 };

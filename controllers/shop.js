@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const Cart = require("../models/cart");
 
 exports.getProducts = (req, res, next) => {
   
@@ -41,8 +42,10 @@ exports.getCart = (req, res, next) => {
 };
 
 exports.postCart = (req, res, next) => {
-  const prodId = req.body.productId;   // 동적 라우팅으로 전달된 productId 값 추출
-  console.log(prodId);
+  const prodId = req.body.productId;          // 동적 라우팅으로 전달된 productId 값 추출
+  Product.findById(prodId, product => {       // Product 모델의 findById() 메소드 호출
+    Cart.addProduct(prodId, product.price);   // 카트에 상품 추가
+  });
   res.redirect('/cart');
 };
 
